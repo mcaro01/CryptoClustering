@@ -34,7 +34,7 @@ Use the following steps to cluster the cryptocurrencies for the best value for k
   Color the graph points with the labels found using K-means.
   Add the "coin_id" column in the hover_cols parameter to identify the cryptocurrency represented by each data point.
 
-## Optimize Clusters with Principal Component Analysis
+## Optimize Clusters with Principal Component Analysis (PCA)
 >Using the original scaled DataFrame, perform a PCA and reduce the features to three principal components.
 
 >Retrieve the explained variance to determine how much information can be attributed to each principal component and then answer the following question in your notebook:
@@ -67,14 +67,22 @@ Use the following steps to cluster the cryptocurrencies for the best value for k
 
 ## Cluster Cryptocurrencies with K-means Using the PCA Data
 Use the following steps to cluster the cryptocurrencies for the best value for k on the PCA data:
-Initialize the K-means model with the best value for k.
-Fit the K-means model using the PCA data.
-Predict the clusters to group the cryptocurrencies using the PCA data.
-Create a copy of the DataFrame with the PCA data and add a new column to store the predicted clusters.
-Create a scatter plot using hvPlot as follows:
-Set the x-axis as "price_change_percentage_24h" and the y-axis as "price_change_percentage_7d".
-Color the graph points with the labels found using K-means.
-Add the "coin_id" column in the hover_cols parameter to identify the cryptocurrency represented by each data point.
+  * Initialize the K-means model with the best value for k.
+  * Fit the K-means model using the PCA data.
+  * Predict the clusters to group the cryptocurrencies using the PCA data.
+  * Create a copy of the DataFrame with the PCA data and add a new column to store the predicted clusters.
+  * Create a scatter plot using hvPlot as follows:
+  * Set the x-axis as "price_change_percentage_24h" and the y-axis as "price_change_percentage_7d".
+  * Color the graph points with the labels found using K-means.
+  * Add the "coin_id" column in the `hover_cols` parameter to identify the cryptocurrency represented by each data point.
+
+## Visualize and Compare the Results
+
+Composite plot to contrast the Elbow curves
+
+Composite plot to contrast the clusters
+
+In this section, you will visually analyze the cluster analysis results by contrasting the outcome with and without using the optimization techniques.
 
 * Answer the following question:
   *  After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data using K-Means?
